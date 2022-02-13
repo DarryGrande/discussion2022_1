@@ -101,7 +101,16 @@
 			reply.rate = .5;
 			  reply.text = "breakfast web sessions lunch walking with dog naps coffee reading watching tv sleeping";
 			  speechSynthesis.speak(reply);	
-			}		
+			}	
+			
+			if (data == "dice")
+			{  	
+			  var dicenr = Math.floor(Math.random() * 6) + 1;
+			  reply.rate = .5;
+				
+			  reply.text = "Dicenumber is " + dicenr;
+			  speechSynthesis.speak(reply);	
+			}	
 		  
 		  if (data == "I like germany")
 			{			 
@@ -252,10 +261,17 @@
 		<div id="output" class="hide"></div>
 		 <br> <br>
 		<button type="button" onclick="answer('hello')">Test answering to 'hello'</button>
-		 <br> <br>
-		<button type="button" onclick="test()">Test speaking only</button>
-		 <br> <br>
-		<button type="button" onclick="getAllVoices()">Load all Voices</button>
+		 <br> <br>	
+		Try with these words:
+		<br>
+		time <br>
+		weekday <br>
+		hello <br>
+		how are you <br>
+		new numbers <br>
+		funny story <br>
+		to-do list <br>
+
 		
 		</center>
 	</body>
