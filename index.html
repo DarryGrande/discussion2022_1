@@ -135,6 +135,17 @@
 				speechSynthesis.speak(reply);	
 		  }
 		  
+			 if (data == "new dog")
+		  {		     
+			var url = "https://random.dog/woof.json";
+				fetch(url)
+				.then(response => response.json())
+				.then(data => {
+				    reply.text = "Here is the dog ";
+					document.getElementById("pic").src = data.url;
+					speechSynthesis.speak(reply);
+		        })			
+			}
 		  
 		  if (data == "funny story")
 		  {
