@@ -151,6 +151,21 @@
 		        });	
 		    }   	
 			
+			if (data == "what do i do")
+		  {
+		     
+			var url = "https://www.boredapi.com/api/activity";
+				fetch(url)
+				.then(response => response.json())
+				.then(data => {
+					reply.rate = 0.6;					
+			        reply.text = "My proposal is, " + data.activity;
+					output.innerHTML = data.activity;
+					speechSynthesis.speak(reply);
+				
+				
+		        });	
+		    }   
 			
 			
 		  
